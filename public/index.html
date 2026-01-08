@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Application Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form action="/submit" method="POST" enctype="multipart/form-data">
+
+<!-- ================= PAGE 1 ================= -->
+<div class="page">
+
+  <div class="header">
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+
+    <div class="title">
+      <h1>7S IQ PRIVATE LIMITED</h1>
+      <h2>APPLICATION FORM</h2>
+    </div>
+
+    <div class="photo">
+      <input type="file" name="photo" required>
+    </div>
+  </div>
+
+  <table>
+    <tr>
+      <td>Date of Application</td>
+      <td><input name="applicationDate"></td>
+      <td>Position Applied</td>
+      <td><input name="positionApplied"></td>
+    </tr>
+    <tr>
+      <td>Employment Type</td>
+      <td colspan="3">
+        <label><input type="radio" name="employmentType" value="Full-Time"> Full-Time</label>
+        <label><input type="radio" name="employmentType" value="Course"> Course</label>
+        <label><input type="radio" name="employmentType" value="Intern"> Intern</label>
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    <tr><th colspan="4" class="section">PERSONAL INFORMATION</th></tr>
+    <tr><td>Full Name</td><td colspan="3"><input name="fullName"></td></tr>
+    <tr><td>Address</td><td colspan="3"><input name="address"></td></tr>
+    <tr>
+      <td>Phone</td><td><input name="phone"></td>
+      <td>Email</td><td><input name="email"></td>
+    </tr>
+    <tr>
+      <td>Date of Birth</td><td><input name="dob"></td>
+      <td>Aadhar No</td><td><input name="aadhar"></td>
+    </tr>
+  </table>
+
+  <!-- EDUCATION -->
+  <table>
+    <tr><th colspan="5" class="section">EDUCATIONAL BACKGROUND</th></tr>
+    <tr>
+      <th>Degree</th><th>Institute</th><th>Year</th><th>Grade</th><th>City</th>
+    </tr>
+    <tr>
+      <td><input name="degree"></td>
+      <td><input name="institute"></td>
+      <td><input name="educationYear"></td>
+      <td><input name="grade"></td>
+      <td><input name="educationCity"></td>
+    </tr>
+  </table>
+
+  <!-- EMPLOYMENT -->
+  <table>
+    <tr><th colspan="4" class="section">EMPLOYMENT HISTORY</th></tr>
+    <tr>
+      <th>Company</th><th>Designation</th><th>Year</th><th>Reason</th>
+    </tr>
+    <tr>
+      <td><input name="company"></td>
+      <td><input name="designation"></td>
+      <td><input name="workYear"></td>
+      <td><input name="reason"></td>
+    </tr>
+  </table>
+
+  <!-- SKILLS -->
+  <table>
+    <tr><th colspan="4" class="section">SKILLS & TRAINING</th></tr>
+    <tr>
+      <th>Skill</th><th>Level</th><th>Year</th><th>Institute</th>
+    </tr>
+    <tr>
+      <td><input name="skill"></td>
+      <td><input name="skillLevel"></td>
+      <td><input name="skillYear"></td>
+      <td><input name="skillInstitute"></td>
+    </tr>
+  </table>
+
+  <div class="footer-icons">
+    <span>📞 +91 7397593704</span>
+    <span>✉ info@7siq.com</span>
+    <span>🌐 www.7siq.com</span>
+  </div>
+
+</div>
+
+<!-- ================= PAGE 2 ================= -->
+<div class="page">
+
+  <div class="header">
+    <div class="logo"><img src="logo.png"></div>
+    <div class="title">
+      <h1>7S IQ PRIVATE LIMITED</h1>
+      <h2>APPLICATION FORM</h2>
+    </div>
+    <div class="photo">
+      <input type="file" name="resume" required>
+    </div>
+  </div>
+
+  <!-- FAMILY -->
+  <table>
+    <tr><th colspan="3" class="section">FAMILY DETAILS</th></tr>
+    <tr><th>Name</th><th>Relationship</th><th>Occupation</th></tr>
+    <tr>
+      <td><input name="familyName"></td>
+      <td><input name="familyRelation"></td>
+      <td><input name="familyOccupation"></td>
+    </tr>
+  </table>
+
+  <!-- EMERGENCY -->
+  <table>
+    <tr><th colspan="5" class="section">EMERGENCY CONTACT</th></tr>
+    <tr>
+      <th>Name</th><th>Relation</th><th>Occupation</th><th>Qualification</th><th>City</th>
+    </tr>
+    <tr>
+      <td><input name="emergencyName"></td>
+      <td><input name="emergencyRelation"></td>
+      <td><input name="emergencyOccupation"></td>
+      <td><input name="emergencyQualification"></td>
+      <td><input name="emergencyCity"></td>
+    </tr>
+  </table>
+
+  <p class="declaration">
+    I hereby declare that the above information is true to the best of my knowledge.
+  </p>
+
+  <table>
+    <tr>
+      <td>Place</td><td><input name="place"></td>
+      <td>Date</td><td><input name="date"></td>
+    </tr>
+    <tr>
+      <td>Applicant Signature</td>
+      <td colspan="3"><input name="signature"></td>
+    </tr>
+  </table>
+
+  <div style="text-align:center;margin-top:20px;">
+    <button type="submit">Submit Application</button>
+  </div>
+
+  <div class="footer-icons">
+    <span>📞 +91 7397593704</span>
+    <span>✉ info@7siq.com</span>
+    <span>🌐 www.7siq.com</span>
+  </div>
+
+</div>
+
+</form>
+
+<!-- SCRIPT UNCHANGED -->
+<script>
+document.querySelector("form").addEventListener("submit", function (e) {
+  const inputs = this.querySelectorAll("input");
+  let allFilled = true;
+
+  inputs.forEach(input => {
+    if (input.type === "radio") {
+      const radios = document.querySelectorAll(
+        "input[type='radio'][name='" + input.name + "']"
+      );
+      let checked = false;
+      radios.forEach(r => {
+        if (r.checked) checked = true;
+      });
+      if (!checked) allFilled = false;
+    } else {
+      if (input.value.trim() === "") allFilled = false;
+    }
+  });
+
+  if (!allFilled) {
+    e.preventDefault();
+    alert("All fields are mandatory");
+  }
+});
+</script>
+
+</body>
+</html>

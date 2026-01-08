@@ -1,0 +1,135 @@
+body {
+  background: #e8dccb;   /* sandal background */
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  width: 850px;
+  margin: 20px auto;
+  background: #fffaf2;   /* light sandal */
+  padding: 25px;
+  border: 1px solid #b59b7a;
+}
+
+/* HEADER */
+.header {
+  display: grid;
+  grid-template-columns: 100px 1fr 120px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.logo {
+  border: 1px solid #b59b7a;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3e6d4;
+}
+
+.logo img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 18px;
+  color: #5c4033;
+}
+
+.title h2 {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #7a5c3d;
+}
+
+.photo {
+  border: 1px solid #b59b7a;
+  height: 120px;
+  text-align: center;
+  line-height: 120px;
+  font-size: 12px;
+  background: #f3e6d4;
+  color: #5c4033;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+th, td {
+  border: 1px solid #b59b7a;
+  padding: 6px;
+  font-size: 13px;
+  color: #5c4033;
+}
+
+th {
+  background: #e6d3b3;
+  text-align: center;
+}
+
+.section {
+  background: #dcc4a1;
+  text-align: left;
+  font-weight: bold;
+  color: #5c4033;
+}
+
+/* INPUT */
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #5c4033;
+}
+
+/* DECLARATION */
+.declaration {
+  margin: 15px 0;
+  font-size: 13px;
+  color: #5c4033;
+}
+/* FIX RADIO BUTTON ALIGNMENT */
+td label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  gap: 6px;
+}
+
+td input[type="radio"] {
+  width: auto;
+  margin: 0;
+  transform: scale(1.1);
+  vertical-align: middle;
+}
+/* EXISTING YOUR CODE IS UNCHANGED */
+
+/* ✅ FIX RADIO BUTTON ALIGNMENT */
+input[type="radio"] {
+  transform: scale(1.1);
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* ✅ FOOTER ICONS */
+.footer-icons {
+  margin-top: 20px;
+  padding-top: 8px;
+  border-top: 1px solid #b59b7a;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #5c4033;
+}
